@@ -12,11 +12,11 @@ import { requestRobots, searchRobots } from './reducers'
 
 import './index.css';
 
-const logger = createLogger()
+// const logger = createLogger()
 
 const rootReducers = combineReducers({requestRobots, searchRobots})
 
-const store = createStore(rootReducers, applyMiddleware(thunkMiddleware, logger))
+const store = createStore(rootReducers, applyMiddleware(thunkMiddleware))
 
 ReactDOM.render(
   <Provider store={store}>
